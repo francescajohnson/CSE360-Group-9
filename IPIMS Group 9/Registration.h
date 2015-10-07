@@ -101,6 +101,10 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::TextBox^  textBoxHealthInsurance;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  labelRegistration;
+	private: System::Windows::Forms::MenuStrip^  menuStripScheduleAppointments;
+	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
 
 
 
@@ -165,12 +169,17 @@ namespace IPIMSGroup9 {
 			this->textBoxHealthInsurance = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->labelRegistration = (gcnew System::Windows::Forms::Label());
+			this->menuStripScheduleAppointments = (gcnew System::Windows::Forms::MenuStrip());
+			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1->SuspendLayout();
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBoxAddressInformation->SuspendLayout();
 			this->groupBoxContactInformation->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBoxMedicalInformation->SuspendLayout();
+			this->menuStripScheduleAppointments->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// groupBox1
@@ -181,9 +190,9 @@ namespace IPIMSGroup9 {
 			this->groupBox1->Controls->Add(this->radioButtonNurse);
 			this->groupBox1->Controls->Add(this->radioButtonDoctor);
 			this->groupBox1->Controls->Add(this->radioButtonPatient);
-			this->groupBox1->Location = System::Drawing::Point(13, 53);
+			this->groupBox1->Location = System::Drawing::Point(13, 69);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(564, 56);
+			this->groupBox1->Size = System::Drawing::Size(564, 40);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Please select Your classification below:";
@@ -545,6 +554,7 @@ namespace IPIMSGroup9 {
 			this->buttonRegister->TabIndex = 17;
 			this->buttonRegister->Text = L"Register";
 			this->buttonRegister->UseVisualStyleBackColor = true;
+			this->buttonRegister->Click += gcnew System::EventHandler(this, &Registration::buttonRegister_Click);
 			// 
 			// groupBoxMedicalInformation
 			// 
@@ -617,17 +627,48 @@ namespace IPIMSGroup9 {
 			this->labelRegistration->AutoSize = true;
 			this->labelRegistration->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelRegistration->Location = System::Drawing::Point(13, 13);
+			this->labelRegistration->Location = System::Drawing::Point(12, 30);
 			this->labelRegistration->Name = L"labelRegistration";
 			this->labelRegistration->Size = System::Drawing::Size(175, 36);
 			this->labelRegistration->TabIndex = 0;
 			this->labelRegistration->Text = L"Registration";
+			// 
+			// menuStripScheduleAppointments
+			// 
+			this->menuStripScheduleAppointments->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->patientServicesToolStripMenuItem,
+					this->reportsToolStripMenuItem, this->toolsToolStripMenuItem
+			});
+			this->menuStripScheduleAppointments->Location = System::Drawing::Point(0, 0);
+			this->menuStripScheduleAppointments->Name = L"menuStripScheduleAppointments";
+			this->menuStripScheduleAppointments->Size = System::Drawing::Size(594, 24);
+			this->menuStripScheduleAppointments->TabIndex = 20;
+			this->menuStripScheduleAppointments->Text = L"menuStrip1";
+			// 
+			// patientServicesToolStripMenuItem
+			// 
+			this->patientServicesToolStripMenuItem->Name = L"patientServicesToolStripMenuItem";
+			this->patientServicesToolStripMenuItem->Size = System::Drawing::Size(101, 20);
+			this->patientServicesToolStripMenuItem->Text = L"Patient Services";
+			// 
+			// reportsToolStripMenuItem
+			// 
+			this->reportsToolStripMenuItem->Name = L"reportsToolStripMenuItem";
+			this->reportsToolStripMenuItem->Size = System::Drawing::Size(59, 20);
+			this->reportsToolStripMenuItem->Text = L"Reports";
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
+			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
+			this->toolsToolStripMenuItem->Text = L"Tools";
 			// 
 			// Registration
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(594, 502);
+			this->Controls->Add(this->menuStripScheduleAppointments);
 			this->Controls->Add(this->groupBoxMedicalInformation);
 			this->Controls->Add(this->buttonRegister);
 			this->Controls->Add(this->groupBox2);
@@ -651,6 +692,8 @@ namespace IPIMSGroup9 {
 			this->groupBox2->PerformLayout();
 			this->groupBoxMedicalInformation->ResumeLayout(false);
 			this->groupBoxMedicalInformation->PerformLayout();
+			this->menuStripScheduleAppointments->ResumeLayout(false);
+			this->menuStripScheduleAppointments->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -687,6 +730,16 @@ private: System::Void radioButtonResearchStaff_CheckedChanged(System::Object^  s
 	labelIdNumber->Text = "ID:";
 	labelIdNumber->Location = System::Drawing::Point(426, 49);
 	groupBoxMedicalInformation->Visible = false;
+}
+private: System::Void buttonRegister_Click(System::Object^  sender, System::EventArgs^  e) {
+	// Add code here for when the register button is pressed
+
+
+
+
+
+
+
 }
 };
 
