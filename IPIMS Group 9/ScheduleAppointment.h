@@ -60,13 +60,53 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::ComboBox^  comboBoxDoctorSelection;
 
 	private: System::Windows::Forms::Button^  buttonScheduleAppointment;
-	private: System::Windows::Forms::MenuStrip^  menuStripScheduleAppointments;
-	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+
+
+
+
 	private: System::Windows::Forms::CheckBox^  checkBoxEmergencyAlert;
 	private: System::Windows::Forms::GroupBox^  groupBox2;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::MenuStrip^  menuStrip;
+	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  searchForPatientToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  updatePatientToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  viewAppointmentsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  ePrescriptionToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  searchRecordsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  editProfileInformationToolStripMenuItem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	protected:
@@ -100,20 +140,26 @@ namespace IPIMSGroup9 {
 			this->labelFirstName = (gcnew System::Windows::Forms::Label());
 			this->linkLabelLogout = (gcnew System::Windows::Forms::LinkLabel());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->buttonScheduleAppointment = (gcnew System::Windows::Forms::Button());
 			this->comboBoxDoctorSelection = (gcnew System::Windows::Forms::ComboBox());
 			this->monthCalendarScheduling = (gcnew System::Windows::Forms::MonthCalendar());
-			this->menuStripScheduleAppointments = (gcnew System::Windows::Forms::MenuStrip());
+			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
+			this->menuStrip = (gcnew System::Windows::Forms::MenuStrip());
 			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchForPatientToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->updatePatientToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->viewAppointmentsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ePrescriptionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchRecordsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->editProfileInformationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBox1->SuspendLayout();
-			this->menuStripScheduleAppointments->SuspendLayout();
 			this->groupBox2->SuspendLayout();
+			this->menuStrip->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// labelScheduleAppointment
@@ -173,7 +219,6 @@ namespace IPIMSGroup9 {
 			this->labelDateOfBirth->Size = System::Drawing::Size(69, 13);
 			this->labelDateOfBirth->TabIndex = 9;
 			this->labelDateOfBirth->Text = L"Date of Birth:";
-			this->labelDateOfBirth->Click += gcnew System::EventHandler(this, &ScheduleAppointment::labelDateOfBirth_Click);
 			// 
 			// textBoxDateOfBirth
 			// 
@@ -260,20 +305,30 @@ namespace IPIMSGroup9 {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Calendar and Doctor Selection for Appointment Scheduling:";
 			// 
-			// checkBoxEmergencyAlert
+			// groupBox2
 			// 
-			this->checkBoxEmergencyAlert->AccessibleRole = System::Windows::Forms::AccessibleRole::Alert;
-			this->checkBoxEmergencyAlert->AutoSize = true;
-			this->checkBoxEmergencyAlert->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->groupBox2->Controls->Add(this->label1);
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->checkBoxEmergencyAlert->ForeColor = System::Drawing::Color::Red;
-			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(243, 157);
-			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2);
-			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
-			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(131, 24);
-			this->checkBoxEmergencyAlert->TabIndex = 19;
-			this->checkBoxEmergencyAlert->Text = L"Emergency Alert";
-			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
+			this->groupBox2->Location = System::Drawing::Point(244, 52);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(234, 100);
+			this->groupBox2->TabIndex = 22;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Text = L"Emergency Alert Conditions Include:";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(6, 16);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(199, 78);
+			this->label1->TabIndex = 9;
+			this->label1->Text = L"  = Suspected heart attack or stroke\r\n  = Sudden or extreme difficulty breathing\r"
+				L"\n  = Sudden loss of consciousness\r\n  = Severe bleeding\r\n  = Severe abdominal pai"
+				L"n\r\n  = Injuries to one or both eyes";
 			// 
 			// buttonScheduleAppointment
 			// 
@@ -285,6 +340,7 @@ namespace IPIMSGroup9 {
 			this->buttonScheduleAppointment->TabIndex = 18;
 			this->buttonScheduleAppointment->Text = L"Schedule Appointment";
 			this->buttonScheduleAppointment->UseVisualStyleBackColor = true;
+			this->buttonScheduleAppointment->Click += gcnew System::EventHandler(this, &ScheduleAppointment::buttonScheduleAppointment_Click);
 			// 
 			// comboBoxDoctorSelection
 			// 
@@ -305,93 +361,137 @@ namespace IPIMSGroup9 {
 			this->monthCalendarScheduling->Name = L"monthCalendarScheduling";
 			this->monthCalendarScheduling->TabIndex = 0;
 			// 
-			// menuStripScheduleAppointments
+			// checkBoxEmergencyAlert
 			// 
-			this->menuStripScheduleAppointments->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->checkBoxEmergencyAlert->AccessibleRole = System::Windows::Forms::AccessibleRole::Alert;
+			this->checkBoxEmergencyAlert->AutoSize = true;
+			this->checkBoxEmergencyAlert->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkBoxEmergencyAlert->ForeColor = System::Drawing::Color::Red;
+			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(243, 157);
+			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2);
+			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
+			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(131, 24);
+			this->checkBoxEmergencyAlert->TabIndex = 19;
+			this->checkBoxEmergencyAlert->Text = L"Emergency Alert";
+			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
+			// 
+			// menuStrip
+			// 
+			this->menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->patientServicesToolStripMenuItem,
 					this->reportsToolStripMenuItem, this->toolsToolStripMenuItem
 			});
-			this->menuStripScheduleAppointments->Location = System::Drawing::Point(0, 0);
-			this->menuStripScheduleAppointments->Name = L"menuStripScheduleAppointments";
-			this->menuStripScheduleAppointments->Size = System::Drawing::Size(594, 24);
-			this->menuStripScheduleAppointments->TabIndex = 19;
-			this->menuStripScheduleAppointments->Text = L"menuStrip1";
-			this->menuStripScheduleAppointments->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &ScheduleAppointment::menuStrip1_ItemClicked);
+			this->menuStrip->Location = System::Drawing::Point(0, 0);
+			this->menuStrip->Name = L"menuStrip";
+			this->menuStrip->Size = System::Drawing::Size(594, 24);
+			this->menuStrip->TabIndex = 21;
+			this->menuStrip->Text = L"menuStrip1";
 			// 
 			// patientServicesToolStripMenuItem
 			// 
+			this->patientServicesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->searchForPatientToolStripMenuItem,
+					this->updatePatientToolStripMenuItem, this->viewAppointmentsToolStripMenuItem, this->ePrescriptionToolStripMenuItem
+			});
 			this->patientServicesToolStripMenuItem->Name = L"patientServicesToolStripMenuItem";
 			this->patientServicesToolStripMenuItem->Size = System::Drawing::Size(101, 20);
 			this->patientServicesToolStripMenuItem->Text = L"Patient Services";
 			// 
+			// searchForPatientToolStripMenuItem
+			// 
+			this->searchForPatientToolStripMenuItem->Name = L"searchForPatientToolStripMenuItem";
+			this->searchForPatientToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->searchForPatientToolStripMenuItem->Text = L"Search for Patient";
+			// 
+			// updatePatientToolStripMenuItem
+			// 
+			this->updatePatientToolStripMenuItem->Name = L"updatePatientToolStripMenuItem";
+			this->updatePatientToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->updatePatientToolStripMenuItem->Text = L"Update Patient";
+			// 
+			// viewAppointmentsToolStripMenuItem
+			// 
+			this->viewAppointmentsToolStripMenuItem->Name = L"viewAppointmentsToolStripMenuItem";
+			this->viewAppointmentsToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->viewAppointmentsToolStripMenuItem->Text = L"View Appointments";
+			// 
+			// ePrescriptionToolStripMenuItem
+			// 
+			this->ePrescriptionToolStripMenuItem->Name = L"ePrescriptionToolStripMenuItem";
+			this->ePrescriptionToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->ePrescriptionToolStripMenuItem->Text = L"E-Prescription";
+			// 
 			// reportsToolStripMenuItem
 			// 
+			this->reportsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->searchRecordsToolStripMenuItem });
 			this->reportsToolStripMenuItem->Name = L"reportsToolStripMenuItem";
-			this->reportsToolStripMenuItem->Size = System::Drawing::Size(59, 20);
-			this->reportsToolStripMenuItem->Text = L"Reports";
+			this->reportsToolStripMenuItem->Size = System::Drawing::Size(61, 20);
+			this->reportsToolStripMenuItem->Text = L"Records";
+			// 
+			// searchRecordsToolStripMenuItem
+			// 
+			this->searchRecordsToolStripMenuItem->Name = L"searchRecordsToolStripMenuItem";
+			this->searchRecordsToolStripMenuItem->Size = System::Drawing::Size(154, 22);
+			this->searchRecordsToolStripMenuItem->Text = L"Search Records";
 			// 
 			// toolsToolStripMenuItem
 			// 
+			this->toolsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->editProfileInformationToolStripMenuItem });
 			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
 			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
 			this->toolsToolStripMenuItem->Text = L"Tools";
 			// 
-			// groupBox2
+			// editProfileInformationToolStripMenuItem
 			// 
-			this->groupBox2->Controls->Add(this->label1);
-			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->groupBox2->Location = System::Drawing::Point(244, 52);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(227, 100);
-			this->groupBox2->TabIndex = 22;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Emergency Alert Conditions Include:";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(6, 16);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(199, 78);
-			this->label1->TabIndex = 9;
-			this->label1->Text = L"  = Suspected heart attack or stroke\r\n  = Sudden or extreme difficulty breathing\r"
-				L"\n  = Sudden loss of consciousness\r\n  = Severe bleeding\r\n  = Severe abdominal pai"
-				L"n\r\n  = Injuries to one or both eyes";
+			this->editProfileInformationToolStripMenuItem->Name = L"editProfileInformationToolStripMenuItem";
+			this->editProfileInformationToolStripMenuItem->Size = System::Drawing::Size(197, 22);
+			this->editProfileInformationToolStripMenuItem->Text = L"Edit Profile Information";
 			// 
 			// ScheduleAppointment
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(594, 502);
+			this->Controls->Add(this->menuStrip);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->linkLabelLogout);
 			this->Controls->Add(this->groupBoxPersonalInformation);
 			this->Controls->Add(this->buttonScheduleAppointments);
 			this->Controls->Add(this->buttonViewAppointments);
 			this->Controls->Add(this->labelScheduleAppointment);
-			this->Controls->Add(this->menuStripScheduleAppointments);
-			this->MainMenuStrip = this->menuStripScheduleAppointments;
 			this->Name = L"ScheduleAppointment";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
 			this->groupBoxPersonalInformation->ResumeLayout(false);
 			this->groupBoxPersonalInformation->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
-			this->menuStripScheduleAppointments->ResumeLayout(false);
-			this->menuStripScheduleAppointments->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			this->menuStrip->ResumeLayout(false);
+			this->menuStrip->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void labelDateOfBirth_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+
+
+private: System::Void buttonScheduleAppointment_Click(System::Object^  sender, System::EventArgs^  e) {
+	// add code here for wwhen the schedule appointments button is selected.
+	if (checkBoxEmergencyAlert->Checked)
+		MessageBox::Show("Our staff will contact you as soon as possible");
+
+	else
+		MessageBox::Show("Your appointment has been scheduled.");
+
+
+
+
 }
+
+
+
 };
 }

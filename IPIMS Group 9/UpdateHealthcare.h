@@ -53,11 +53,31 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::Button^  buttonSave;
 	private: System::Windows::Forms::Button^  buttonClear;
 	private: System::Windows::Forms::GroupBox^  groupBox1;
-	private: System::Windows::Forms::MenuStrip^  menuStripScheduleAppointments;
-	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+
+
+
+
 	private: System::Windows::Forms::LinkLabel^  linkLabelLogout;
+	private: System::Windows::Forms::MenuStrip^  menuStrip;
+	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  searchForPatientToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  updatePatientToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  viewAppointmentsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  ePrescriptionToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  searchRecordsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  editProfileInformationToolStripMenuItem;
+
+
+
+
+
+
+
+
+
+
 
 	protected:
 
@@ -82,13 +102,19 @@ namespace IPIMSGroup9 {
 			this->buttonSave = (gcnew System::Windows::Forms::Button());
 			this->buttonClear = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->menuStripScheduleAppointments = (gcnew System::Windows::Forms::MenuStrip());
-			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->linkLabelLogout = (gcnew System::Windows::Forms::LinkLabel());
+			this->menuStrip = (gcnew System::Windows::Forms::MenuStrip());
+			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchForPatientToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->updatePatientToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->viewAppointmentsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ePrescriptionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchRecordsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->editProfileInformationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBox1->SuspendLayout();
-			this->menuStripScheduleAppointments->SuspendLayout();
+			this->menuStrip->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// checkBoxEmergencyAlert
@@ -193,36 +219,6 @@ namespace IPIMSGroup9 {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Emergency Alert Conditions Include:";
 			// 
-			// menuStripScheduleAppointments
-			// 
-			this->menuStripScheduleAppointments->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->patientServicesToolStripMenuItem,
-					this->reportsToolStripMenuItem, this->toolsToolStripMenuItem
-			});
-			this->menuStripScheduleAppointments->Location = System::Drawing::Point(0, 0);
-			this->menuStripScheduleAppointments->Name = L"menuStripScheduleAppointments";
-			this->menuStripScheduleAppointments->Size = System::Drawing::Size(590, 24);
-			this->menuStripScheduleAppointments->TabIndex = 22;
-			this->menuStripScheduleAppointments->Text = L"menuStrip1";
-			// 
-			// patientServicesToolStripMenuItem
-			// 
-			this->patientServicesToolStripMenuItem->Name = L"patientServicesToolStripMenuItem";
-			this->patientServicesToolStripMenuItem->Size = System::Drawing::Size(101, 20);
-			this->patientServicesToolStripMenuItem->Text = L"Patient Services";
-			// 
-			// reportsToolStripMenuItem
-			// 
-			this->reportsToolStripMenuItem->Name = L"reportsToolStripMenuItem";
-			this->reportsToolStripMenuItem->Size = System::Drawing::Size(59, 20);
-			this->reportsToolStripMenuItem->Text = L"Reports";
-			// 
-			// toolsToolStripMenuItem
-			// 
-			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
-			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
-			this->toolsToolStripMenuItem->Text = L"Tools";
-			// 
 			// linkLabelLogout
 			// 
 			this->linkLabelLogout->AutoSize = true;
@@ -235,13 +231,85 @@ namespace IPIMSGroup9 {
 			this->linkLabelLogout->TabStop = true;
 			this->linkLabelLogout->Text = L"Logout";
 			// 
+			// menuStrip
+			// 
+			this->menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->patientServicesToolStripMenuItem,
+					this->reportsToolStripMenuItem, this->toolsToolStripMenuItem
+			});
+			this->menuStrip->Location = System::Drawing::Point(0, 0);
+			this->menuStrip->Name = L"menuStrip";
+			this->menuStrip->Size = System::Drawing::Size(590, 24);
+			this->menuStrip->TabIndex = 22;
+			this->menuStrip->Text = L"menuStrip1";
+			// 
+			// patientServicesToolStripMenuItem
+			// 
+			this->patientServicesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->searchForPatientToolStripMenuItem,
+					this->updatePatientToolStripMenuItem, this->viewAppointmentsToolStripMenuItem, this->ePrescriptionToolStripMenuItem
+			});
+			this->patientServicesToolStripMenuItem->Name = L"patientServicesToolStripMenuItem";
+			this->patientServicesToolStripMenuItem->Size = System::Drawing::Size(101, 20);
+			this->patientServicesToolStripMenuItem->Text = L"Patient Services";
+			// 
+			// searchForPatientToolStripMenuItem
+			// 
+			this->searchForPatientToolStripMenuItem->Name = L"searchForPatientToolStripMenuItem";
+			this->searchForPatientToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->searchForPatientToolStripMenuItem->Text = L"Search for Patient";
+			// 
+			// updatePatientToolStripMenuItem
+			// 
+			this->updatePatientToolStripMenuItem->Name = L"updatePatientToolStripMenuItem";
+			this->updatePatientToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->updatePatientToolStripMenuItem->Text = L"Update Patient";
+			// 
+			// viewAppointmentsToolStripMenuItem
+			// 
+			this->viewAppointmentsToolStripMenuItem->Name = L"viewAppointmentsToolStripMenuItem";
+			this->viewAppointmentsToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->viewAppointmentsToolStripMenuItem->Text = L"View Appointments";
+			// 
+			// ePrescriptionToolStripMenuItem
+			// 
+			this->ePrescriptionToolStripMenuItem->Name = L"ePrescriptionToolStripMenuItem";
+			this->ePrescriptionToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->ePrescriptionToolStripMenuItem->Text = L"E-Prescription";
+			// 
+			// reportsToolStripMenuItem
+			// 
+			this->reportsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->searchRecordsToolStripMenuItem });
+			this->reportsToolStripMenuItem->Name = L"reportsToolStripMenuItem";
+			this->reportsToolStripMenuItem->Size = System::Drawing::Size(61, 20);
+			this->reportsToolStripMenuItem->Text = L"Records";
+			// 
+			// searchRecordsToolStripMenuItem
+			// 
+			this->searchRecordsToolStripMenuItem->Name = L"searchRecordsToolStripMenuItem";
+			this->searchRecordsToolStripMenuItem->Size = System::Drawing::Size(154, 22);
+			this->searchRecordsToolStripMenuItem->Text = L"Search Records";
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this->toolsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->editProfileInformationToolStripMenuItem });
+			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
+			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
+			this->toolsToolStripMenuItem->Text = L"Tools";
+			// 
+			// editProfileInformationToolStripMenuItem
+			// 
+			this->editProfileInformationToolStripMenuItem->Name = L"editProfileInformationToolStripMenuItem";
+			this->editProfileInformationToolStripMenuItem->Size = System::Drawing::Size(197, 22);
+			this->editProfileInformationToolStripMenuItem->Text = L"Edit Profile Information";
+			// 
 			// UpdateHealthcareCondition
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(590, 498);
+			this->Controls->Add(this->menuStrip);
 			this->Controls->Add(this->linkLabelLogout);
-			this->Controls->Add(this->menuStripScheduleAppointments);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->buttonClear);
 			this->Controls->Add(this->buttonSave);
@@ -253,12 +321,12 @@ namespace IPIMSGroup9 {
 			this->HelpButton = true;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"UpdateHealthcareCondition";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
-			this->menuStripScheduleAppointments->ResumeLayout(false);
-			this->menuStripScheduleAppointments->PerformLayout();
+			this->menuStrip->ResumeLayout(false);
+			this->menuStrip->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -270,10 +338,11 @@ namespace IPIMSGroup9 {
 			MessageBox::Show("Our staff will contact you as soon as possible");
 			
 		else
-			MessageBox::Show("Symptoms have been saved.");
+			MessageBox::Show("The symptoms have been saved.");
 	}
 	private: System::Void buttonClear_Click(System::Object^  sender, System::EventArgs^  e) {
 		this->textBoxSymptoms->Text = "What are the symptoms?";
+		this->checkBoxEmergencyAlert->Checked = false;
 	}
 	
 };

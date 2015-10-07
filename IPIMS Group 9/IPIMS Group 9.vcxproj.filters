@@ -27,6 +27,9 @@
     <ClCompile Include="UpdateHealthcare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LoggingIn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Registration.h">
@@ -38,9 +41,18 @@
     <ClInclude Include="UpdateHealthcare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LoggingIn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Registration.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleAppointment.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateHealthcare.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
