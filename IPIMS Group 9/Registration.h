@@ -626,7 +626,7 @@ namespace IPIMSGroup9 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(594, 503);
+			this->ClientSize = System::Drawing::Size(594, 502);
 			this->Controls->Add(this->groupBoxMedicalInformation);
 			this->Controls->Add(this->buttonRegister);
 			this->Controls->Add(this->groupBox2);

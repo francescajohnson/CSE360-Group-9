@@ -79,15 +79,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Registration.cpp" />
+    <ClCompile Include="ScheduleAppointment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Registration.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ScheduleAppointment.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleAppointment.resx">
+      <DependentUpon>ScheduleAppointment.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
