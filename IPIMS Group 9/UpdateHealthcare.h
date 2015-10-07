@@ -76,7 +76,7 @@ namespace IPIMSGroup9 {
 				static_cast<System::Byte>(0)));
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button1->Location = System::Drawing::Point(230, 284);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(66, 29);
 			this->button1->TabIndex = 0;
@@ -91,7 +91,7 @@ namespace IPIMSGroup9 {
 				static_cast<System::Byte>(0)));
 			this->checkBoxEmergencyAlert->ForeColor = System::Drawing::Color::Red;
 			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(11, 284);
-			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2);
 			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
 			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(121, 31);
 			this->checkBoxEmergencyAlert->TabIndex = 1;
@@ -117,7 +117,7 @@ namespace IPIMSGroup9 {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(400, 284);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(66, 29);
 			this->button2->TabIndex = 6;
@@ -133,7 +133,7 @@ namespace IPIMSGroup9 {
 			this->textBoxSymptoms->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBoxSymptoms->Location = System::Drawing::Point(90, 77);
-			this->textBoxSymptoms->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxSymptoms->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxSymptoms->MaximumSize = System::Drawing::Size(376, 407);
 			this->textBoxSymptoms->Multiline = true;
 			this->textBoxSymptoms->Name = L"textBoxSymptoms";
@@ -166,9 +166,9 @@ namespace IPIMSGroup9 {
 			this->Controls->Add(this->button1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->HelpButton = true;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"UpdateHealthcareCondition";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
 			this->Load += gcnew System::EventHandler(this, &UpdateHealthcareCondition::UpdateHealthcareCondition_Load);
 			this->ResumeLayout(false);
@@ -185,18 +185,13 @@ namespace IPIMSGroup9 {
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		Project1::UpdateHealthcareCondition::checkBox1;
-
-		if (checkBox1->Checked)
+		if (checkBoxEmergencyAlert->Checked)
 			MessageBox::Show("Our staff will contact you as soon as possible");
 		else
 			MessageBox::Show("Symptoms have been saved.");
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-		textBox1->Text = "";
-		textBox3->Text = "";
-	}
-	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		
 	}
 	};
 }

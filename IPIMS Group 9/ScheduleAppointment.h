@@ -56,7 +56,7 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::MonthCalendar^  monthCalendarScheduling;
 
-	private: System::Windows::Forms::CheckBox^  checkBoxEmergencyAlert;
+
 	private: System::Windows::Forms::ComboBox^  comboBoxDoctorSelection;
 
 	private: System::Windows::Forms::Button^  buttonScheduleAppointment;
@@ -64,6 +64,7 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+	private: System::Windows::Forms::CheckBox^  checkBoxEmergencyAlert;
 
 
 	protected:
@@ -100,12 +101,12 @@ namespace IPIMSGroup9 {
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->monthCalendarScheduling = (gcnew System::Windows::Forms::MonthCalendar());
 			this->comboBoxDoctorSelection = (gcnew System::Windows::Forms::ComboBox());
-			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
 			this->buttonScheduleAppointment = (gcnew System::Windows::Forms::Button());
 			this->menuStripScheduleAppointments = (gcnew System::Windows::Forms::MenuStrip());
 			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->menuStripScheduleAppointments->SuspendLayout();
@@ -253,20 +254,20 @@ namespace IPIMSGroup9 {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->checkBoxEmergencyAlert);
 			this->groupBox1->Controls->Add(this->buttonScheduleAppointment);
 			this->groupBox1->Controls->Add(this->comboBoxDoctorSelection);
-			this->groupBox1->Controls->Add(this->checkBoxEmergencyAlert);
 			this->groupBox1->Controls->Add(this->monthCalendarScheduling);
 			this->groupBox1->Location = System::Drawing::Point(13, 271);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(563, 220);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Calendar Selection for Appointment Scheduling:";
+			this->groupBox1->Text = L"Calendar and Doctor Selection for Appointment Scheduling:";
 			// 
 			// monthCalendarScheduling
 			// 
-			this->monthCalendarScheduling->Location = System::Drawing::Point(5, 51);
+			this->monthCalendarScheduling->Location = System::Drawing::Point(32, 39);
 			this->monthCalendarScheduling->Name = L"monthCalendarScheduling";
 			this->monthCalendarScheduling->TabIndex = 0;
 			// 
@@ -282,18 +283,6 @@ namespace IPIMSGroup9 {
 			this->comboBoxDoctorSelection->Size = System::Drawing::Size(213, 21);
 			this->comboBoxDoctorSelection->TabIndex = 2;
 			this->comboBoxDoctorSelection->Text = L"Select the Doctor for your Appointment";
-			// 
-			// checkBoxEmergencyAlert
-			// 
-			this->checkBoxEmergencyAlert->AutoSize = true;
-			this->checkBoxEmergencyAlert->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(308, 171);
-			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
-			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(185, 24);
-			this->checkBoxEmergencyAlert->TabIndex = 3;
-			this->checkBoxEmergencyAlert->Text = L"Is this an Emergency\?";
-			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
 			// 
 			// buttonScheduleAppointment
 			// 
@@ -337,6 +326,20 @@ namespace IPIMSGroup9 {
 			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
 			this->toolsToolStripMenuItem->Text = L"Tools";
 			// 
+			// checkBoxEmergencyAlert
+			// 
+			this->checkBoxEmergencyAlert->AccessibleRole = System::Windows::Forms::AccessibleRole::Alert;
+			this->checkBoxEmergencyAlert->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkBoxEmergencyAlert->ForeColor = System::Drawing::Color::Red;
+			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(308, 170);
+			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2);
+			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
+			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(121, 31);
+			this->checkBoxEmergencyAlert->TabIndex = 19;
+			this->checkBoxEmergencyAlert->Text = L"Emergency Alert";
+			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
+			// 
 			// ScheduleAppointment
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -356,7 +359,6 @@ namespace IPIMSGroup9 {
 			this->groupBoxPersonalInformation->ResumeLayout(false);
 			this->groupBoxPersonalInformation->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
 			this->menuStripScheduleAppointments->ResumeLayout(false);
 			this->menuStripScheduleAppointments->PerformLayout();
 			this->ResumeLayout(false);
