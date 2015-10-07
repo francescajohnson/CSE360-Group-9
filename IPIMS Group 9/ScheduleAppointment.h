@@ -479,7 +479,7 @@ namespace IPIMSGroup9 {
 
 
 private: System::Void buttonScheduleAppointment_Click(System::Object^  sender, System::EventArgs^  e) {
-	// add code here for wwhen the schedule appointments button is selected.
+	// add code here for when the schedule appointments button is selected.
 	if (checkBoxEmergencyAlert->Checked)
 		MessageBox::Show("Our staff will contact you as soon as possible");
 
