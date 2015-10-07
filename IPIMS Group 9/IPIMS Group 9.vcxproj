@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Registration.cpp" />
     <ClCompile Include="ScheduleAppointment.cpp" />
   </ItemGroup>

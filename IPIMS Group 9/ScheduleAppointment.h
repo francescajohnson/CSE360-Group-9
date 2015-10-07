@@ -60,6 +60,11 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::ComboBox^  comboBoxDoctorSelection;
 	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
 	private: System::Windows::Forms::Button^  buttonScheduleAppointment;
+	private: System::Windows::Forms::MenuStrip^  menuStripScheduleAppointments;
+	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  reportsToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  toolsToolStripMenuItem;
+
 
 	protected:
 
@@ -98,8 +103,13 @@ namespace IPIMSGroup9 {
 			this->comboBoxDoctorSelection = (gcnew System::Windows::Forms::ComboBox());
 			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
 			this->buttonScheduleAppointment = (gcnew System::Windows::Forms::Button());
+			this->menuStripScheduleAppointments = (gcnew System::Windows::Forms::MenuStrip());
+			this->patientServicesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			this->menuStripScheduleAppointments->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// labelScheduleAppointment
@@ -107,7 +117,7 @@ namespace IPIMSGroup9 {
 			this->labelScheduleAppointment->AutoSize = true;
 			this->labelScheduleAppointment->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->labelScheduleAppointment->Location = System::Drawing::Point(12, 9);
+			this->labelScheduleAppointment->Location = System::Drawing::Point(12, 30);
 			this->labelScheduleAppointment->Name = L"labelScheduleAppointment";
 			this->labelScheduleAppointment->Size = System::Drawing::Size(449, 36);
 			this->labelScheduleAppointment->TabIndex = 1;
@@ -115,7 +125,7 @@ namespace IPIMSGroup9 {
 			// 
 			// buttonViewAppointments
 			// 
-			this->buttonViewAppointments->Location = System::Drawing::Point(12, 48);
+			this->buttonViewAppointments->Location = System::Drawing::Point(12, 69);
 			this->buttonViewAppointments->Name = L"buttonViewAppointments";
 			this->buttonViewAppointments->Size = System::Drawing::Size(108, 23);
 			this->buttonViewAppointments->TabIndex = 2;
@@ -126,7 +136,7 @@ namespace IPIMSGroup9 {
 			// buttonScheduleAppointments
 			// 
 			this->buttonScheduleAppointments->Enabled = false;
-			this->buttonScheduleAppointments->Location = System::Drawing::Point(126, 48);
+			this->buttonScheduleAppointments->Location = System::Drawing::Point(126, 69);
 			this->buttonScheduleAppointments->Name = L"buttonScheduleAppointments";
 			this->buttonScheduleAppointments->Size = System::Drawing::Size(129, 23);
 			this->buttonScheduleAppointments->TabIndex = 3;
@@ -136,7 +146,7 @@ namespace IPIMSGroup9 {
 			// 
 			// buttonUpdateHealthcareNAlerts
 			// 
-			this->buttonUpdateHealthcareNAlerts->Location = System::Drawing::Point(261, 48);
+			this->buttonUpdateHealthcareNAlerts->Location = System::Drawing::Point(261, 69);
 			this->buttonUpdateHealthcareNAlerts->Name = L"buttonUpdateHealthcareNAlerts";
 			this->buttonUpdateHealthcareNAlerts->Size = System::Drawing::Size(101, 23);
 			this->buttonUpdateHealthcareNAlerts->TabIndex = 4;
@@ -154,7 +164,7 @@ namespace IPIMSGroup9 {
 			this->groupBoxPersonalInformation->Controls->Add(this->textBoxFirstName);
 			this->groupBoxPersonalInformation->Controls->Add(this->labelLastName);
 			this->groupBoxPersonalInformation->Controls->Add(this->labelFirstName);
-			this->groupBoxPersonalInformation->Location = System::Drawing::Point(12, 77);
+			this->groupBoxPersonalInformation->Location = System::Drawing::Point(12, 98);
 			this->groupBoxPersonalInformation->Name = L"groupBoxPersonalInformation";
 			this->groupBoxPersonalInformation->Size = System::Drawing::Size(564, 84);
 			this->groupBoxPersonalInformation->TabIndex = 5;
@@ -164,7 +174,7 @@ namespace IPIMSGroup9 {
 			// labelDateOfBirth
 			// 
 			this->labelDateOfBirth->AutoSize = true;
-			this->labelDateOfBirth->Location = System::Drawing::Point(392, 20);
+			this->labelDateOfBirth->Location = System::Drawing::Point(392, 41);
 			this->labelDateOfBirth->Name = L"labelDateOfBirth";
 			this->labelDateOfBirth->Size = System::Drawing::Size(69, 13);
 			this->labelDateOfBirth->TabIndex = 9;
@@ -173,7 +183,7 @@ namespace IPIMSGroup9 {
 			// 
 			// textBoxDateOfBirth
 			// 
-			this->textBoxDateOfBirth->Location = System::Drawing::Point(467, 17);
+			this->textBoxDateOfBirth->Location = System::Drawing::Point(467, 38);
 			this->textBoxDateOfBirth->Name = L"textBoxDateOfBirth";
 			this->textBoxDateOfBirth->Size = System::Drawing::Size(71, 20);
 			this->textBoxDateOfBirth->TabIndex = 8;
@@ -181,7 +191,7 @@ namespace IPIMSGroup9 {
 			// 
 			// textBoxSymptoms
 			// 
-			this->textBoxSymptoms->Location = System::Drawing::Point(73, 43);
+			this->textBoxSymptoms->Location = System::Drawing::Point(73, 64);
 			this->textBoxSymptoms->Name = L"textBoxSymptoms";
 			this->textBoxSymptoms->Size = System::Drawing::Size(465, 20);
 			this->textBoxSymptoms->TabIndex = 7;
@@ -190,7 +200,7 @@ namespace IPIMSGroup9 {
 			// labelSymptoms
 			// 
 			this->labelSymptoms->AutoSize = true;
-			this->labelSymptoms->Location = System::Drawing::Point(9, 46);
+			this->labelSymptoms->Location = System::Drawing::Point(9, 67);
 			this->labelSymptoms->Name = L"labelSymptoms";
 			this->labelSymptoms->Size = System::Drawing::Size(58, 13);
 			this->labelSymptoms->TabIndex = 6;
@@ -198,7 +208,7 @@ namespace IPIMSGroup9 {
 			// 
 			// textBoxLastName
 			// 
-			this->textBoxLastName->Location = System::Drawing::Point(266, 17);
+			this->textBoxLastName->Location = System::Drawing::Point(266, 38);
 			this->textBoxLastName->Name = L"textBoxLastName";
 			this->textBoxLastName->Size = System::Drawing::Size(120, 20);
 			this->textBoxLastName->TabIndex = 5;
@@ -206,7 +216,7 @@ namespace IPIMSGroup9 {
 			// 
 			// textBoxFirstName
 			// 
-			this->textBoxFirstName->Location = System::Drawing::Point(73, 17);
+			this->textBoxFirstName->Location = System::Drawing::Point(73, 38);
 			this->textBoxFirstName->Name = L"textBoxFirstName";
 			this->textBoxFirstName->Size = System::Drawing::Size(120, 20);
 			this->textBoxFirstName->TabIndex = 4;
@@ -215,7 +225,7 @@ namespace IPIMSGroup9 {
 			// labelLastName
 			// 
 			this->labelLastName->AutoSize = true;
-			this->labelLastName->Location = System::Drawing::Point(199, 20);
+			this->labelLastName->Location = System::Drawing::Point(199, 41);
 			this->labelLastName->Name = L"labelLastName";
 			this->labelLastName->Size = System::Drawing::Size(61, 13);
 			this->labelLastName->TabIndex = 3;
@@ -224,7 +234,7 @@ namespace IPIMSGroup9 {
 			// labelFirstName
 			// 
 			this->labelFirstName->AutoSize = true;
-			this->labelFirstName->Location = System::Drawing::Point(7, 20);
+			this->labelFirstName->Location = System::Drawing::Point(7, 41);
 			this->labelFirstName->Name = L"labelFirstName";
 			this->labelFirstName->Size = System::Drawing::Size(60, 13);
 			this->labelFirstName->TabIndex = 0;
@@ -233,7 +243,7 @@ namespace IPIMSGroup9 {
 			// linkLabelLogout
 			// 
 			this->linkLabelLogout->AutoSize = true;
-			this->linkLabelLogout->Location = System::Drawing::Point(520, 57);
+			this->linkLabelLogout->Location = System::Drawing::Point(520, 78);
 			this->linkLabelLogout->Name = L"linkLabelLogout";
 			this->linkLabelLogout->Size = System::Drawing::Size(40, 13);
 			this->linkLabelLogout->TabIndex = 6;
@@ -242,25 +252,27 @@ namespace IPIMSGroup9 {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->buttonScheduleAppointment);
 			this->groupBox1->Controls->Add(this->comboBoxDoctorSelection);
+			this->groupBox1->Controls->Add(this->checkBoxEmergencyAlert);
 			this->groupBox1->Controls->Add(this->dateTimePicker1);
 			this->groupBox1->Controls->Add(this->monthCalendarScheduling);
-			this->groupBox1->Location = System::Drawing::Point(13, 168);
+			this->groupBox1->Location = System::Drawing::Point(13, 189);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(563, 251);
+			this->groupBox1->Size = System::Drawing::Size(563, 220);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Calendar Selection for Appointment Scheduling:";
 			// 
 			// monthCalendarScheduling
 			// 
-			this->monthCalendarScheduling->Location = System::Drawing::Point(32, 51);
+			this->monthCalendarScheduling->Location = System::Drawing::Point(5, 51);
 			this->monthCalendarScheduling->Name = L"monthCalendarScheduling";
 			this->monthCalendarScheduling->TabIndex = 0;
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(32, 19);
+			this->dateTimePicker1->Location = System::Drawing::Point(21, 19);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
 			this->dateTimePicker1->TabIndex = 1;
@@ -272,7 +284,7 @@ namespace IPIMSGroup9 {
 				L"Dr. Thomas Smith", L"Dr. Susan Enriquez",
 					L"Dr. Linda Chattin"
 			});
-			this->comboBoxDoctorSelection->Location = System::Drawing::Point(308, 18);
+			this->comboBoxDoctorSelection->Location = System::Drawing::Point(308, 39);
 			this->comboBoxDoctorSelection->Name = L"comboBoxDoctorSelection";
 			this->comboBoxDoctorSelection->Size = System::Drawing::Size(213, 21);
 			this->comboBoxDoctorSelection->TabIndex = 2;
@@ -283,7 +295,7 @@ namespace IPIMSGroup9 {
 			this->checkBoxEmergencyAlert->AutoSize = true;
 			this->checkBoxEmergencyAlert->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(378, 425);
+			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(308, 171);
 			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
 			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(185, 24);
 			this->checkBoxEmergencyAlert->TabIndex = 3;
@@ -294,20 +306,49 @@ namespace IPIMSGroup9 {
 			// 
 			this->buttonScheduleAppointment->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.5F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->buttonScheduleAppointment->Location = System::Drawing::Point(370, 455);
+			this->buttonScheduleAppointment->Location = System::Drawing::Point(308, 130);
 			this->buttonScheduleAppointment->Name = L"buttonScheduleAppointment";
 			this->buttonScheduleAppointment->Size = System::Drawing::Size(206, 35);
 			this->buttonScheduleAppointment->TabIndex = 18;
 			this->buttonScheduleAppointment->Text = L"Schedule Appointment";
 			this->buttonScheduleAppointment->UseVisualStyleBackColor = true;
 			// 
+			// menuStripScheduleAppointments
+			// 
+			this->menuStripScheduleAppointments->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->patientServicesToolStripMenuItem,
+					this->reportsToolStripMenuItem, this->toolsToolStripMenuItem
+			});
+			this->menuStripScheduleAppointments->Location = System::Drawing::Point(0, 0);
+			this->menuStripScheduleAppointments->Name = L"menuStripScheduleAppointments";
+			this->menuStripScheduleAppointments->Size = System::Drawing::Size(594, 24);
+			this->menuStripScheduleAppointments->TabIndex = 19;
+			this->menuStripScheduleAppointments->Text = L"menuStrip1";
+			this->menuStripScheduleAppointments->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &ScheduleAppointment::menuStrip1_ItemClicked);
+			// 
+			// patientServicesToolStripMenuItem
+			// 
+			this->patientServicesToolStripMenuItem->Name = L"patientServicesToolStripMenuItem";
+			this->patientServicesToolStripMenuItem->Size = System::Drawing::Size(101, 20);
+			this->patientServicesToolStripMenuItem->Text = L"Patient Services";
+			// 
+			// reportsToolStripMenuItem
+			// 
+			this->reportsToolStripMenuItem->Name = L"reportsToolStripMenuItem";
+			this->reportsToolStripMenuItem->Size = System::Drawing::Size(59, 20);
+			this->reportsToolStripMenuItem->Text = L"Reports";
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
+			this->toolsToolStripMenuItem->Size = System::Drawing::Size(48, 20);
+			this->toolsToolStripMenuItem->Text = L"Tools";
+			// 
 			// ScheduleAppointment
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(594, 502);
-			this->Controls->Add(this->buttonScheduleAppointment);
-			this->Controls->Add(this->checkBoxEmergencyAlert);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->linkLabelLogout);
 			this->Controls->Add(this->groupBoxPersonalInformation);
@@ -315,11 +356,16 @@ namespace IPIMSGroup9 {
 			this->Controls->Add(this->buttonScheduleAppointments);
 			this->Controls->Add(this->buttonViewAppointments);
 			this->Controls->Add(this->labelScheduleAppointment);
+			this->Controls->Add(this->menuStripScheduleAppointments);
+			this->MainMenuStrip = this->menuStripScheduleAppointments;
 			this->Name = L"ScheduleAppointment";
 			this->Text = L"ScheduleAppointment";
 			this->groupBoxPersonalInformation->ResumeLayout(false);
 			this->groupBoxPersonalInformation->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			this->menuStripScheduleAppointments->ResumeLayout(false);
+			this->menuStripScheduleAppointments->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -327,5 +373,7 @@ namespace IPIMSGroup9 {
 #pragma endregion
 	private: System::Void labelDateOfBirth_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void menuStrip1_ItemClicked(System::Object^  sender, System::Windows::Forms::ToolStripItemClickedEventArgs^  e) {
+}
 };
 }
