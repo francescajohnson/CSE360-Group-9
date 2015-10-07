@@ -1,5 +1,6 @@
 #include "ScheduleAppointment.h"
 #include "Registration.h"
+#include "UpdateHealthcare.h"
 
 
 using namespace System;
@@ -14,6 +15,9 @@ void main(array<String^>^ arg) {
 	Application::Run(%formRegistration);
 
 	IPIMSGroup9::ScheduleAppointment formScheduleAppt;
+	Application::Run(%formScheduleAppt);
+
+	IPIMSGroup9::UpdateHealthcareCondition formUpdateHealthcare;
 	Application::Run(%formScheduleAppt);
 
 }

@@ -81,12 +81,16 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Registration.cpp" />
     <ClCompile Include="ScheduleAppointment.cpp" />
+    <ClCompile Include="UpdateHealthcare.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Registration.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ScheduleAppointment.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="UpdateHealthcare.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -96,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleAppointment.resx">
       <DependentUpon>ScheduleAppointment.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateHealthcare.resx">
+      <DependentUpon>UpdateHealthcare.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

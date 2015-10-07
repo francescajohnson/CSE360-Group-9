@@ -34,7 +34,7 @@ namespace IPIMSGroup9 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  labelRegistration;
+
 	protected:
 
 	protected:
@@ -100,6 +100,7 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::Label^  labelHealthInsuranceNumber;
 	private: System::Windows::Forms::TextBox^  textBoxHealthInsurance;
 	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  labelRegistration;
 
 
 
@@ -118,7 +119,6 @@ namespace IPIMSGroup9 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->labelRegistration = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->radioButtonResearchStaff = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButtonLabStaff = (gcnew System::Windows::Forms::RadioButton());
@@ -164,6 +164,7 @@ namespace IPIMSGroup9 {
 			this->labelHealthInsuranceNumber = (gcnew System::Windows::Forms::Label());
 			this->textBoxHealthInsurance = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->labelRegistration = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBoxAddressInformation->SuspendLayout();
@@ -171,17 +172,6 @@ namespace IPIMSGroup9 {
 			this->groupBox2->SuspendLayout();
 			this->groupBoxMedicalInformation->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// labelRegistration
-			// 
-			this->labelRegistration->AutoSize = true;
-			this->labelRegistration->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelRegistration->Location = System::Drawing::Point(13, 13);
-			this->labelRegistration->Name = L"labelRegistration";
-			this->labelRegistration->Size = System::Drawing::Size(175, 36);
-			this->labelRegistration->TabIndex = 0;
-			this->labelRegistration->Text = L"Registration";
 			// 
 			// groupBox1
 			// 
@@ -622,6 +612,17 @@ namespace IPIMSGroup9 {
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Health Insurance:";
 			// 
+			// labelRegistration
+			// 
+			this->labelRegistration->AutoSize = true;
+			this->labelRegistration->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelRegistration->Location = System::Drawing::Point(13, 13);
+			this->labelRegistration->Name = L"labelRegistration";
+			this->labelRegistration->Size = System::Drawing::Size(175, 36);
+			this->labelRegistration->TabIndex = 0;
+			this->labelRegistration->Text = L"Registration";
+			// 
 			// Registration
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -637,7 +638,7 @@ namespace IPIMSGroup9 {
 			this->Controls->Add(this->labelRegistration);
 			this->Name = L"Registration";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
-			this->Text = L"Registration";
+			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBoxPersonalInformation->ResumeLayout(false);

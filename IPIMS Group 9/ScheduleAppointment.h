@@ -58,7 +58,7 @@ namespace IPIMSGroup9 {
 
 	private: System::Windows::Forms::CheckBox^  checkBoxEmergencyAlert;
 	private: System::Windows::Forms::ComboBox^  comboBoxDoctorSelection;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+
 	private: System::Windows::Forms::Button^  buttonScheduleAppointment;
 	private: System::Windows::Forms::MenuStrip^  menuStripScheduleAppointments;
 	private: System::Windows::Forms::ToolStripMenuItem^  patientServicesToolStripMenuItem;
@@ -99,7 +99,6 @@ namespace IPIMSGroup9 {
 			this->linkLabelLogout = (gcnew System::Windows::Forms::LinkLabel());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->monthCalendarScheduling = (gcnew System::Windows::Forms::MonthCalendar());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->comboBoxDoctorSelection = (gcnew System::Windows::Forms::ComboBox());
 			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
 			this->buttonScheduleAppointment = (gcnew System::Windows::Forms::Button());
@@ -166,7 +165,7 @@ namespace IPIMSGroup9 {
 			this->groupBoxPersonalInformation->Controls->Add(this->labelFirstName);
 			this->groupBoxPersonalInformation->Location = System::Drawing::Point(12, 98);
 			this->groupBoxPersonalInformation->Name = L"groupBoxPersonalInformation";
-			this->groupBoxPersonalInformation->Size = System::Drawing::Size(564, 84);
+			this->groupBoxPersonalInformation->Size = System::Drawing::Size(564, 167);
 			this->groupBoxPersonalInformation->TabIndex = 5;
 			this->groupBoxPersonalInformation->TabStop = false;
 			this->groupBoxPersonalInformation->Text = L"Personal Information:";
@@ -192,8 +191,10 @@ namespace IPIMSGroup9 {
 			// textBoxSymptoms
 			// 
 			this->textBoxSymptoms->Location = System::Drawing::Point(73, 64);
+			this->textBoxSymptoms->Multiline = true;
 			this->textBoxSymptoms->Name = L"textBoxSymptoms";
-			this->textBoxSymptoms->Size = System::Drawing::Size(465, 20);
+			this->textBoxSymptoms->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->textBoxSymptoms->Size = System::Drawing::Size(465, 97);
 			this->textBoxSymptoms->TabIndex = 7;
 			this->textBoxSymptoms->Text = L"What are your symptoms\?";
 			// 
@@ -255,9 +256,8 @@ namespace IPIMSGroup9 {
 			this->groupBox1->Controls->Add(this->buttonScheduleAppointment);
 			this->groupBox1->Controls->Add(this->comboBoxDoctorSelection);
 			this->groupBox1->Controls->Add(this->checkBoxEmergencyAlert);
-			this->groupBox1->Controls->Add(this->dateTimePicker1);
 			this->groupBox1->Controls->Add(this->monthCalendarScheduling);
-			this->groupBox1->Location = System::Drawing::Point(13, 189);
+			this->groupBox1->Location = System::Drawing::Point(13, 271);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(563, 220);
 			this->groupBox1->TabIndex = 7;
@@ -269,13 +269,6 @@ namespace IPIMSGroup9 {
 			this->monthCalendarScheduling->Location = System::Drawing::Point(5, 51);
 			this->monthCalendarScheduling->Name = L"monthCalendarScheduling";
 			this->monthCalendarScheduling->TabIndex = 0;
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(21, 19);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
-			this->dateTimePicker1->TabIndex = 1;
 			// 
 			// comboBoxDoctorSelection
 			// 
@@ -359,7 +352,7 @@ namespace IPIMSGroup9 {
 			this->Controls->Add(this->menuStripScheduleAppointments);
 			this->MainMenuStrip = this->menuStripScheduleAppointments;
 			this->Name = L"ScheduleAppointment";
-			this->Text = L"ScheduleAppointment";
+			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
 			this->groupBoxPersonalInformation->ResumeLayout(false);
 			this->groupBoxPersonalInformation->PerformLayout();
 			this->groupBox1->ResumeLayout(false);

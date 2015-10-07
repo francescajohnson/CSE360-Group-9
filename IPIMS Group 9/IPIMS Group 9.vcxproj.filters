@@ -24,12 +24,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UpdateHealthcare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Registration.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="ScheduleAppointment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateHealthcare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
