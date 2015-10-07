@@ -59,7 +59,8 @@ namespace IPIMSGroup9 {
 	private: System::Windows::Forms::CheckBox^  checkBoxEmergencyAlert;
 	private: System::Windows::Forms::ComboBox^  comboBoxDoctorSelection;
 	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
-	private: System::Windows::Forms::Button^  buttonRegister;
+	private: System::Windows::Forms::Button^  buttonScheduleAppointment;
+
 	protected:
 
 	protected:
@@ -96,7 +97,7 @@ namespace IPIMSGroup9 {
 			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->comboBoxDoctorSelection = (gcnew System::Windows::Forms::ComboBox());
 			this->checkBoxEmergencyAlert = (gcnew System::Windows::Forms::CheckBox());
-			this->buttonRegister = (gcnew System::Windows::Forms::Button());
+			this->buttonScheduleAppointment = (gcnew System::Windows::Forms::Button());
 			this->groupBoxPersonalInformation->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
@@ -289,23 +290,23 @@ namespace IPIMSGroup9 {
 			this->checkBoxEmergencyAlert->Text = L"Is this an Emergency\?";
 			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
 			// 
-			// buttonRegister
+			// buttonScheduleAppointment
 			// 
-			this->buttonRegister->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.5F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->buttonRegister->Location = System::Drawing::Point(370, 455);
-			this->buttonRegister->Name = L"buttonRegister";
-			this->buttonRegister->Size = System::Drawing::Size(206, 35);
-			this->buttonRegister->TabIndex = 18;
-			this->buttonRegister->Text = L"Schedule Appointment";
-			this->buttonRegister->UseVisualStyleBackColor = true;
+			this->buttonScheduleAppointment->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.5F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->buttonScheduleAppointment->Location = System::Drawing::Point(370, 455);
+			this->buttonScheduleAppointment->Name = L"buttonScheduleAppointment";
+			this->buttonScheduleAppointment->Size = System::Drawing::Size(206, 35);
+			this->buttonScheduleAppointment->TabIndex = 18;
+			this->buttonScheduleAppointment->Text = L"Schedule Appointment";
+			this->buttonScheduleAppointment->UseVisualStyleBackColor = true;
 			// 
 			// ScheduleAppointment
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(594, 502);
-			this->Controls->Add(this->buttonRegister);
+			this->Controls->Add(this->buttonScheduleAppointment);
 			this->Controls->Add(this->checkBoxEmergencyAlert);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->linkLabelLogout);
