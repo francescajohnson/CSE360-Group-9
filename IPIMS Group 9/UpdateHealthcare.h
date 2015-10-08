@@ -157,7 +157,7 @@ namespace IPIMSGroup9 {
 			this->textBoxSymptoms->ScrollBars = System::Windows::Forms::ScrollBars::Both;
 			this->textBoxSymptoms->Size = System::Drawing::Size(651, 235);
 			this->textBoxSymptoms->TabIndex = 7;
-			this->textBoxSymptoms->Text = L"What are the symptoms\?";
+			this->textBoxSymptoms->Text = L"";
 			this->textBoxSymptoms->TextChanged += gcnew System::EventHandler(this, &UpdateHealthcareCondition::textBoxSymptoms_TextChanged);
 			// 
 			// labelUpdateHealthcareConditions
