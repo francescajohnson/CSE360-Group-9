@@ -346,7 +346,7 @@ namespace IPIMSGroup9 {
 	private: System::Void buttonSave_Click(System::Object^  sender, System::EventArgs^  e) {
 		
 		
-		if (textBoxSymptoms->Text)
+		if (textBoxSymptoms->)
 		{
 			if (checkBoxEmergencyAlert->Checked)
 				MessageBox::Show("Our staff will contact you as soon as possible");
@@ -364,7 +364,8 @@ namespace IPIMSGroup9 {
 	}
 	
 private: System::Void textBoxSymptoms_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		
+
+
 }
 private: System::Void checkBoxEmergencyAlert_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }

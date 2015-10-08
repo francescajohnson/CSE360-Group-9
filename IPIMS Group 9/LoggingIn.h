@@ -1,4 +1,4 @@
-#include "Registration.h"
+
 #pragma once
 
 namespace IPIMSGroup9 {
@@ -81,9 +81,10 @@ namespace IPIMSGroup9 {
 			this->labelWelcome->AutoSize = true;
 			this->labelWelcome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelWelcome->Location = System::Drawing::Point(53, 45);
+			this->labelWelcome->Location = System::Drawing::Point(71, 55);
+			this->labelWelcome->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelWelcome->Name = L"labelWelcome";
-			this->labelWelcome->Size = System::Drawing::Size(138, 36);
+			this->labelWelcome->Size = System::Drawing::Size(173, 42);
 			this->labelWelcome->TabIndex = 2;
 			this->labelWelcome->Text = L"Welcome";
 			// 
@@ -92,9 +93,10 @@ namespace IPIMSGroup9 {
 			this->labelPleaseLogin->AutoSize = true;
 			this->labelPleaseLogin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelPleaseLogin->Location = System::Drawing::Point(56, 81);
+			this->labelPleaseLogin->Location = System::Drawing::Point(75, 100);
+			this->labelPleaseLogin->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelPleaseLogin->Name = L"labelPleaseLogin";
-			this->labelPleaseLogin->Size = System::Drawing::Size(129, 17);
+			this->labelPleaseLogin->Size = System::Drawing::Size(152, 20);
 			this->labelPleaseLogin->TabIndex = 3;
 			this->labelPleaseLogin->Text = L"Please login below.";
 			// 
@@ -104,42 +106,49 @@ namespace IPIMSGroup9 {
 			this->groupBox2->Controls->Add(this->labelPassword);
 			this->groupBox2->Controls->Add(this->textBoxUsername);
 			this->groupBox2->Controls->Add(this->labelUsername);
-			this->groupBox2->Location = System::Drawing::Point(170, 144);
+			this->groupBox2->Location = System::Drawing::Point(227, 177);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(278, 84);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Size = System::Drawing::Size(371, 103);
 			this->groupBox2->TabIndex = 17;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Login Information:";
 			// 
 			// textBoxPassword
 			// 
-			this->textBoxPassword->Location = System::Drawing::Point(71, 46);
+			this->textBoxPassword->Location = System::Drawing::Point(95, 57);
+			this->textBoxPassword->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBoxPassword->Name = L"textBoxPassword";
-			this->textBoxPassword->Size = System::Drawing::Size(201, 20);
+			this->textBoxPassword->Size = System::Drawing::Size(267, 22);
 			this->textBoxPassword->TabIndex = 7;
 			// 
 			// labelPassword
 			// 
 			this->labelPassword->AutoSize = true;
-			this->labelPassword->Location = System::Drawing::Point(9, 49);
+			this->labelPassword->Location = System::Drawing::Point(12, 60);
+			this->labelPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelPassword->Name = L"labelPassword";
-			this->labelPassword->Size = System::Drawing::Size(56, 13);
+			this->labelPassword->Size = System::Drawing::Size(73, 17);
 			this->labelPassword->TabIndex = 6;
 			this->labelPassword->Text = L"Password:";
 			// 
 			// textBoxUsername
 			// 
-			this->textBoxUsername->Location = System::Drawing::Point(71, 17);
+			this->textBoxUsername->Location = System::Drawing::Point(95, 21);
+			this->textBoxUsername->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBoxUsername->Name = L"textBoxUsername";
-			this->textBoxUsername->Size = System::Drawing::Size(201, 20);
+			this->textBoxUsername->Size = System::Drawing::Size(267, 22);
 			this->textBoxUsername->TabIndex = 4;
+			this->textBoxUsername->TextChanged += gcnew System::EventHandler(this, &LoggingIn::textBoxUsername_TextChanged);
 			// 
 			// labelUsername
 			// 
 			this->labelUsername->AutoSize = true;
-			this->labelUsername->Location = System::Drawing::Point(7, 20);
+			this->labelUsername->Location = System::Drawing::Point(9, 25);
+			this->labelUsername->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelUsername->Name = L"labelUsername";
-			this->labelUsername->Size = System::Drawing::Size(58, 13);
+			this->labelUsername->Size = System::Drawing::Size(77, 17);
 			this->labelUsername->TabIndex = 0;
 			this->labelUsername->Text = L"Username:";
 			// 
@@ -147,9 +156,10 @@ namespace IPIMSGroup9 {
 			// 
 			this->buttonContinue->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.5F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->buttonContinue->Location = System::Drawing::Point(255, 317);
+			this->buttonContinue->Location = System::Drawing::Point(340, 390);
+			this->buttonContinue->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->buttonContinue->Name = L"buttonContinue";
-			this->buttonContinue->Size = System::Drawing::Size(115, 35);
+			this->buttonContinue->Size = System::Drawing::Size(153, 43);
 			this->buttonContinue->TabIndex = 20;
 			this->buttonContinue->Text = L"Continue";
 			this->buttonContinue->UseVisualStyleBackColor = true;
@@ -160,23 +170,25 @@ namespace IPIMSGroup9 {
 			this->checkBoxNewUser->AutoSize = true;
 			this->checkBoxNewUser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->checkBoxNewUser->Location = System::Drawing::Point(182, 253);
+			this->checkBoxNewUser->Location = System::Drawing::Point(243, 311);
+			this->checkBoxNewUser->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->checkBoxNewUser->Name = L"checkBoxNewUser";
-			this->checkBoxNewUser->Size = System::Drawing::Size(252, 24);
+			this->checkBoxNewUser->Size = System::Drawing::Size(308, 29);
 			this->checkBoxNewUser->TabIndex = 21;
 			this->checkBoxNewUser->Text = L"Need to register as a new user\?";
 			this->checkBoxNewUser->UseVisualStyleBackColor = true;
 			// 
 			// LoggingIn
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(594, 502);
+			this->ClientSize = System::Drawing::Size(792, 618);
 			this->Controls->Add(this->checkBoxNewUser);
 			this->Controls->Add(this->buttonContinue);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->labelPleaseLogin);
 			this->Controls->Add(this->labelWelcome);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"LoggingIn";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Interactive Patient Information System (IPIMS) - Group 9";
@@ -202,5 +214,7 @@ namespace IPIMSGroup9 {
 		else
 			MessageBox::Show("Please wait while the system logs you in.");
 	}
+private: System::Void textBoxUsername_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }

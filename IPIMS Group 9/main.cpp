@@ -2,6 +2,7 @@
 #include "Registration.h"
 #include "UpdateHealthcare.h"
 #include "LoggingIn.h"
+#include "mainForm.h"
 
 
 using namespace System;
@@ -10,8 +11,12 @@ using namespace System::Windows::Forms;
 [STAThread]
 void main() {
 
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
+
+	IPIMSGroup9::mainForm mainForm1;
+	Application::Run(%mainForm1);
 
 	IPIMSGroup9::LoggingIn formLoggingIn;
 	Application::Run(%formLoggingIn);

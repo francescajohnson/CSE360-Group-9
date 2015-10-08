@@ -1,4 +1,8 @@
+#include "LoggingIn.h"
 #pragma once
+
+
+
 
 namespace IPIMSGroup9 {
 
@@ -789,7 +793,9 @@ private: System::Void radioButtonResearchStaff_CheckedChanged(System::Object^  s
 }
 private: System::Void buttonRegister_Click(System::Object^  sender, System::EventArgs^  e) {
 	// Add code here for when the register button is pressed
-
+	this->Hide();
+	LoggingIn^ lIn = gcnew LoggingIn();
+	lIn->ShowDialog();
 
 
 

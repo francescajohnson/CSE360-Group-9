@@ -30,6 +30,9 @@
     <ClCompile Include="LoggingIn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Registration.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LoggingIn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
