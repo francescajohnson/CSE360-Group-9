@@ -15,8 +15,8 @@ int main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	IPIMSGroup9::mainForm formmainForm;
-	Application::Run(%formmainForm);
+	IPIMSGroup9::mainForm mainForm1;
+	Application::Run(%mainForm1);
 
 	IPIMSGroup9::LoggingIn formLoggingIn;
 	Application::Run(%formLoggingIn);
