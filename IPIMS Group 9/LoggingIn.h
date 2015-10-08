@@ -1,4 +1,4 @@
-
+#include "Registration.h"
 #pragma once
 
 namespace IPIMSGroup9 {
@@ -208,7 +208,9 @@ namespace IPIMSGroup9 {
 			IPIMSGroup9::Registration formRegistration;
 			Application::Run(%formRegistration);*/
 			
-			MessageBox::Show("Taking you to the registration form.");
+			this->Hide();
+			Registration^ regn = gcnew Registration();
+			regn->ShowDialog();
 
 		}
 		else
