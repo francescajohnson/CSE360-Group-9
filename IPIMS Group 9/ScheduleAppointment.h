@@ -81,34 +81,6 @@ namespace IPIMSGroup9 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	protected:
 
 	protected:
@@ -172,6 +144,7 @@ namespace IPIMSGroup9 {
 			this->labelScheduleAppointment->Size = System::Drawing::Size(331, 36);
 			this->labelScheduleAppointment->TabIndex = 1;
 			this->labelScheduleAppointment->Text = L"Schedule Appointments";
+			this->labelScheduleAppointment->Click += gcnew System::EventHandler(this, &ScheduleAppointment::labelScheduleAppointment_Click);
 			// 
 			// buttonViewAppointments
 			// 
@@ -228,6 +201,8 @@ namespace IPIMSGroup9 {
 			this->textBoxDateOfBirth->Size = System::Drawing::Size(71, 20);
 			this->textBoxDateOfBirth->TabIndex = 8;
 			this->textBoxDateOfBirth->Text = L"01/01/2121";
+			this->textBoxDateOfBirth->Click += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxDateOfBirth_TextClick);
+
 			// 
 			// textBoxSymptoms
 			// 
@@ -238,6 +213,9 @@ namespace IPIMSGroup9 {
 			this->textBoxSymptoms->Size = System::Drawing::Size(465, 97);
 			this->textBoxSymptoms->TabIndex = 7;
 			this->textBoxSymptoms->Text = L"What are the symptoms\?";
+			this->textBoxSymptoms->TextChanged += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxSymptoms_TextChanged);
+			this->textBoxSymptoms->Click += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxSymptoms_TextClick);
+
 			// 
 			// labelSymptoms
 			// 
@@ -255,6 +233,9 @@ namespace IPIMSGroup9 {
 			this->textBoxLastName->Size = System::Drawing::Size(120, 20);
 			this->textBoxLastName->TabIndex = 5;
 			this->textBoxLastName->Text = L"Roberts";
+			this->textBoxLastName->TextChanged += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxLastName_TextChanged);
+			this->textBoxLastName->Click += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxLastName_TextClick);
+
 			// 
 			// textBoxFirstName
 			// 
@@ -263,6 +244,8 @@ namespace IPIMSGroup9 {
 			this->textBoxFirstName->Size = System::Drawing::Size(120, 20);
 			this->textBoxFirstName->TabIndex = 4;
 			this->textBoxFirstName->Text = L"Julie";
+			this->textBoxFirstName->TextChanged += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxFirstName_TextChanged);
+			this->textBoxFirstName->Click += gcnew System::EventHandler(this, &ScheduleAppointment::textBoxFirstName_TextClick);
 			// 
 			// labelLastName
 			// 
@@ -272,6 +255,7 @@ namespace IPIMSGroup9 {
 			this->labelLastName->Size = System::Drawing::Size(61, 13);
 			this->labelLastName->TabIndex = 3;
 			this->labelLastName->Text = L"Last Name:";
+			this->labelLastName->Click += gcnew System::EventHandler(this, &ScheduleAppointment::labelLastName_Click);
 			// 
 			// labelFirstName
 			// 
@@ -370,12 +354,13 @@ namespace IPIMSGroup9 {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->checkBoxEmergencyAlert->ForeColor = System::Drawing::Color::Red;
 			this->checkBoxEmergencyAlert->Location = System::Drawing::Point(243, 157);
-			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBoxEmergencyAlert->Margin = System::Windows::Forms::Padding(2);
 			this->checkBoxEmergencyAlert->Name = L"checkBoxEmergencyAlert";
 			this->checkBoxEmergencyAlert->Size = System::Drawing::Size(160, 24);
 			this->checkBoxEmergencyAlert->TabIndex = 19;
 			this->checkBoxEmergencyAlert->Text = L"Emergency Alert";
 			this->checkBoxEmergencyAlert->UseVisualStyleBackColor = true;
+			this->checkBoxEmergencyAlert->CheckedChanged += gcnew System::EventHandler(this, &ScheduleAppointment::checkBoxEmergencyAlert_CheckedChanged);
 			// 
 			// menuStrip
 			// 
@@ -386,7 +371,7 @@ namespace IPIMSGroup9 {
 			});
 			this->menuStrip->Location = System::Drawing::Point(0, 0);
 			this->menuStrip->Name = L"menuStrip";
-			this->menuStrip->Size = System::Drawing::Size(594, 24);
+			this->menuStrip->Size = System::Drawing::Size(599, 24);
 			this->menuStrip->TabIndex = 21;
 			this->menuStrip->Text = L"menuStrip1";
 			// 
@@ -454,7 +439,7 @@ namespace IPIMSGroup9 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(594, 502);
+			this->ClientSize = System::Drawing::Size(599, 536);
 			this->Controls->Add(this->menuStrip);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->linkLabelLogout);
@@ -480,22 +465,73 @@ namespace IPIMSGroup9 {
 #pragma endregion
 
 
-private: System::Void buttonScheduleAppointment_Click(System::Object^  sender, System::EventArgs^  e) {
-	// add code here for when the schedule appointments button is selected.
-	if (checkBoxEmergencyAlert->Checked)
-		MessageBox::Show("Our staff will contact you as soon as possible");
+	private: System::Void buttonScheduleAppointment_Click(System::Object^  sender, System::EventArgs^  e) {
+		// add code here for when the schedule appointments button is selected.
+		if (checkBoxEmergencyAlert->Checked)
+			MessageBox::Show("Our staff will contact you as soon as possible");
 
-	else
-		MessageBox::Show("Your appointment has been scheduled.");
-
-
+		else
+			MessageBox::Show("Your appointment has been scheduled.");
 
 
+
+
+	}
+
+
+
+	private: System::Void buttonViewAppointments_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void textBoxSymptoms_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+
+	}
+	private: System::Void textBoxSymptoms_TextClick(System::Object^  sender, System::EventArgs^  e) {
+
+
+		textBoxSymptoms->SelectAll();
+
+	}
+	private: System::Void checkBoxEmergencyAlert_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+	}
+
+	private: System::Void textBoxDateOfBirth_TextClick(System::Object^  sender, System::EventArgs^  e) {
+
+		textBoxDateOfBirth->SelectAll();
+	}
+
+	private: System::Void textBoxFirstName_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		
+		
+		
+	}
+	private: System::Void textBoxFirstName_TextClick(System::Object^  sender, System::EventArgs^  e) {
+
+		textBoxFirstName->SelectAll();
+
+	}
+	private: System::Void labelScheduleAppointment_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+
+
+
+
+	private: System::Void textBoxLastName_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+
+
+	}
+
+	private: System::Void textBoxLastName_TextClick(System::Object^  sender, System::EventArgs^  e) {
+
+		textBoxLastName->SelectAll();
+
+
+
+	}
+private: System::Void labelLastName_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 
 
 
-private: System::Void buttonViewAppointments_Click(System::Object^  sender, System::EventArgs^  e) {
-}
+
 };
 }
